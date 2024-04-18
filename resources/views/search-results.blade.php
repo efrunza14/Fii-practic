@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <h2>Search Results</h2>
-        @if($products->isEmpty())
+        @if ($products->isEmpty())
             <p>No products found.</p>
         @else
             <div class="row">

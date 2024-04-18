@@ -8,6 +8,9 @@
         <div class="col-6">
             <!-- Afișarea produselor -->
             <h4>Produse</h4>
+
+            {{-- @include('select_tags') --}}
+
             <div class="row">
                 @foreach ($products as $product)
                     <div class="col-md-4 mb-3">
@@ -35,5 +38,6 @@
         <div class="col-3">
             @include('shared.search-product')
         </div>
+
     </div>
 @endsection

@@ -38,14 +38,14 @@ class UserController extends Controller
     public function update(User $user)
     {
         $validated = request()->validate([
-            'name'=>'required|min:3|max:40',
-            'bio'=>'nullable|min:1|max:255',
-            'image'=>'image'
+            'name' => 'required|min:3|max:40',
+            'bio' => 'nullable|min:1|max:255',
+            'image' => 'image'
         ]);
 
-        if(request()->has('image')){
+        if (request()->has('image')) {
             $imagePath = request()->file('image')->store('profile', 'public');
-            $validated['image']=$imagePath;
+            $validated['image'] = $imagePath;
         }
 
         $user->update($validated);

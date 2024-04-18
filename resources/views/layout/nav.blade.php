@@ -9,15 +9,15 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
-                @guest
+                {{-- @guest --}}
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{{route('login')}}">Login</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('register')}}">Register</a>
                     </li>
-                @endguest
-                @auth()
+                {{-- @endguest
+                @auth() --}}
                     <li class="nav-item">
                         <a class="nav-link" href="/shop">Shop</a>
                     </li>
@@ -25,7 +25,8 @@
                         <a class="nav-link" href="/">Explore</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('profile')}}">{{ Auth::user()->name }}</a>
+                        {{-- <a class="nav-link" href="{{route('profile')}}">{{ Auth::user()->name }}</a> --}}
+                        <a class="nav-link" href="{{route('profile')}}">Maria</a>
                     </li>
                     <li class="nav-item">
                         <form action="{{ route('logout') }}" method="POST">
@@ -33,7 +34,7 @@
                             <button class="btn btn-danger btn-sm"type="submit"> Logout </button>
                         </form>
                     </li>
-                @endauth
+                {{-- @endauth --}}
             </ul>
         </div>
     </div>
